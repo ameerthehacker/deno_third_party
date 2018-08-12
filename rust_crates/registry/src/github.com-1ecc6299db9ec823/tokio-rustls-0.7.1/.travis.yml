@@ -1,0 +1,14 @@
+language: rust
+rust:
+    - stable
+cache: cargo
+os:
+    - linux
+    - osx
+
+script:
+    - cargo test --all-features
+    - cd examples/server
+    - cargo check
+    - cd ../../examples/client
+    - cargo check
